@@ -197,20 +197,33 @@
 </div>
 <div class="slide">
 	<h1>Length</h1>
-	<ul>
+	<ul class="incremental">
 		<li>Short Form - [0]XXXXXXX (0 - 127 bytes)</li>
-		<li>Long Form - [1]XXXXXXX (128 - 2^1016 bytes)</li>
+		<li>Long Form - [1]XXXXXXX (128 - 5 e+151 bytes)</li>
 		<li>Indefinite Form - [1]0000000 </li>
 	</ul>
-	<div class="handout">
-	</div>
+</div>
+<div class="slide">
+	<h1>Value</h1>
+	<ul>
+		<li>Take the next x bytes and decode based on type</li>
+	</ul>
+</div>
+<div class="slide">
+	<h1>OID</h1>
+	<ul class="incremental">
+		<li>Object Identifier</li>
+		<li>1.2.840.113549.1.1.1 = rsaEncryption</li>
+		<li>iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-1(1) rsaEncryption(1)</li>
+		<li>First byte determines first two digits</li>
+		<li>Subsequent bytes that start with 0 are converted to integers</li>
+		<li>Bytes that start with 1 and concatenated until a most-significant bit is 0 then converted to integer</li>
+	</ul>
 </div>
 <div class="slide">
 	<h1>References</h1>
 	<ul>
 	</ul>
-	<div class="handout">
-	</div>
 </div>
 
 
